@@ -134,10 +134,19 @@ void main()
         }
         else
         {
-            printf("data entry : ");
-            scanf("%d",&pushData);
-            pushTail(pushData);   
-            hapusNode(1);    
+            int qPilih;
+            printf("Hapus Antrian depan (0)/Tambah Antrian (1) : ");
+            scanf(" %d",&qPilih);
+            if (qPilih==1)
+            {
+                printf("data entry : ");
+                scanf("%d",&pushData);
+                pushTail(pushData);    
+            }
+            else if (qPilih==0)
+            {
+                hapusNode(1);
+            }
         }
         
     }
